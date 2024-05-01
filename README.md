@@ -20,3 +20,10 @@ it send cookies to attacker site
 
 # cleaning sessionStorage
 `just load the manifest.json from clear_sessionStorage_add folder`
+
+
+# testing 
+
+go to
+
+`about:debugging#/runtime/this-firefox`
