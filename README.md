@@ -4,6 +4,8 @@ tested on Mozilla Firefox (115.6.0)
 it send cookies to attacker site 
 # requirements 
 `python3
+,
+php
 &
 7z`
 # building payload
