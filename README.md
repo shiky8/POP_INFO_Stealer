@@ -8,8 +8,7 @@ it send cookies to attacker site
 1) it woring on Chromium now  test on Chromium Version 120.0.6099.216
 2) add pop window to make it more phishy
 3) update c.php to make the extension more hidden
-
-![ building payload](https://raw.githubusercontent.com/shiky8/POP_INFO_Stealer/main/dems/buliding.png)
+[![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://github.com/shiky8/POP_INFO_Stealer/raw/main/dems/pop.mp4)
 
 # requirements 
 `python3
